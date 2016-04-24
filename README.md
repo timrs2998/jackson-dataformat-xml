@@ -11,7 +11,7 @@ overrides needed to make data-binding work.
 
 It is worth noting, however, that the goal is NOT to be full JAXB clone; or to be general purpose XML toolkit.
 
-Specifically:
+Specifically:r
 
  * While XML serialization should ideally be similar to JAXB output, deviations are not necessarily considered bugs -- we do "best-effort" matching
  * What should be guaranteed is that any XML written using this module must be readable using module as well: that is, we do aim for full XML serialization.
@@ -170,7 +170,7 @@ Similarly it is possible to read content, sub-tree by sub-tree; assuming similar
 we would use
 
 ```java
-XMLOutputFactory f = XMLOutputFactory.newFactory();
+XMLInputFactory xmlInputFactory = XMLInputFactory.newFactory();
 File inputFile = ...;
 XMLStreamReader sr = f.createXMLStreamReader(new FileInputStream(inputFile));
 
